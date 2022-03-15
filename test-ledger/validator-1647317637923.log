@@ -1,0 +1,29 @@
+[0m[38;5;8m[[0m2022-03-15T04:13:57.926205261Z [0m[32mINFO [0m solana_test_validator[0m[38;5;8m][0m solana-validator 1.9.1 (src:b66e2ae3; feat:4100269022)
+[0m[38;5;8m[[0m2022-03-15T04:13:57.926252066Z [0m[32mINFO [0m solana_test_validator[0m[38;5;8m][0m Starting validator with: ArgsOs {
+        inner: [
+            "solana-test-validator",
+            "-r",
+            "--mint",
+            "E2F3fsS1HpsLb2VpEgsA5ztfo83CWFWW4jWpC6FvJ6qR",
+            "--bpf-program",
+            "4yBTZXsuz7c1X3PJF4PPCJr8G6HnNAgRvzAWVoFZMncH",
+            "/home/gab-182/Desktop/escrow/target/deploy",
+        ],
+    }
+[0m[38;5;8m[[0m2022-03-15T04:13:57.926700303Z [0m[33mWARN [0m solana_perf[0m[38;5;8m][0m CUDA is disabled
+[0m[38;5;8m[[0m2022-03-15T04:13:57.926735984Z [0m[32mINFO [0m solana_perf[0m[38;5;8m][0m AVX detected
+[0m[38;5;8m[[0m2022-03-15T04:13:57.926771869Z [0m[32mINFO [0m solana_perf[0m[38;5;8m][0m AVX2 detected
+[0m[38;5;8m[[0m2022-03-15T04:13:57.929898214Z [0m[32mINFO [0m solana_faucet::faucet[0m[38;5;8m][0m Faucet started. Listening on: 0.0.0.0:9900
+[0m[38;5;8m[[0m2022-03-15T04:13:57.929920867Z [0m[32mINFO [0m solana_faucet::faucet[0m[38;5;8m][0m Faucet account address: 7qxVytHowW174KFUKiqVhehBtfkousaSzE783u1PCtNs
+thread 'main' panicked at 'Failed to read "/home/gab-182/Desktop/escrow/target/deploy": Is a directory (os error 21)', /var/lib/buildkite-agent/builds/kong-1/solana-labs/solana-secondary/program-test/src/lib.rs:410:31
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/f1edd0429582dd29cccacaf50fd134b05593bd9c/library/std/src/panicking.rs:517:5
+   1: core::panicking::panic_fmt
+             at /rustc/f1edd0429582dd29cccacaf50fd134b05593bd9c/library/core/src/panicking.rs:100:14
+   2: solana_program_test::read_file::{{closure}}
+   3: solana_program_test::read_file
+   4: solana_test_validator::TestValidator::start
+   5: solana_test_validator::TestValidatorGenesis::start_with_mint_address
+   6: solana_test_validator::main
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
