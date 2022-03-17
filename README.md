@@ -34,4 +34,6 @@ solana-keygen new
 solana airdrop 1
 ```
 
-12. `npm run deploy` the program (smart contract) to the specified network in `solana.escrow.config.json`.
+4. At the end, deploy your program to the devnet on solana.
+
+`npm run deploy` the program (smart contract) to the specified network in `solana.escrow.config.json`.
