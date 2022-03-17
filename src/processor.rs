@@ -8,16 +8,13 @@ use solana_program::{
 	pubkey::Pubkey,
 	sysvar::{rent::Rent, Sysvar},
 };
-
 use spl_token::state::Account as TokenAccount;
-
 use crate::{instruction::EscrowInstruction, error::EscrowError, state::Escrow};
-
 /**********************************************************************************************/
 pub struct Processor;
-
+/**********************************************************************************************/
 impl Processor {
-
+	/*----------------------------------------------------------------------------------------*/
 	pub fn process(
 		program_id: &Pubkey,
 		accounts: &[AccountInfo],
@@ -38,7 +35,7 @@ impl Processor {
 			}
 		}
 	}
-	/*-----------------------------------------------------------------------------------------*/
+	/*---------------------------------------------------------------------------------------*/
 	fn process_init_escrow(
 		accounts: &[AccountInfo],
 		amount: u64,
@@ -110,9 +107,6 @@ impl Processor {
 		amount_expected_by_taker: u64,
 		program_id: &Pubkey,
 	) -> ProgramResult {
-
-
-
 		let account_info_iter = &mut accounts.iter();
 		let taker = next_account_info(account_info_iter)?;
 
